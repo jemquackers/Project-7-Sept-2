@@ -1,0 +1,69 @@
+body {
+  background-color: #19b5ff;
+}
+
+header {
+  margin: 20px 0px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: large;
+}
+
+button {
+  border: 0.5px solid blue;
+  text-align: center;
+  padding: 10px 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h2 {
+  color: #19b5ff;
+  padding: 20px 0px;
+}
+
+h5 {
+  color: #19b5ff;
+  padding: 0px 0px 10px 0px;
+}
+
+.logo {
+  position: relative;
+  bottom: 60px;
+}
+.searchbar {
+  padding-top: 20px;
+  color: black;
+}
+
+.currentdetail {
+  background-color: white;
+  border: solid;
+  text-align: center;
+  color: #19b5ff;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.futurelooking {
+  background: white;
+  text-align: center;
+  color: #19b5ff;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: large;
+}
+small {
+  margin: 20px 0px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: large;
+}
