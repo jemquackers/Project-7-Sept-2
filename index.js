@@ -29,6 +29,7 @@ let month = months[now.getMonth()];
 
 h4.innerHTML = `${day} ${month} ${date} ${year}`;
 h6.innerHTML = `Last updated: ${hours}:${minutes}`;
+
 // button for location
 function showPosition(position) {
   let lat = position.coords.latitude;
@@ -91,18 +92,24 @@ function showTemp(response) {
 // function for Celsius and Fahrenheit
 function toFahr(event) {
   event.preventDefault();
-  let h5 = document.querySelector("h5");
-  h5.innerHTML = 9;
+  let tempElement = document.querySelector("h5");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32);
+  tempElement.innerHTML = fahrenheitTemperature;
 }
 
 function toCels(event) {
   event.preventDefault();
-  let h5 = document.querySelector("h5");
-  h5.innerHTML = 10;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  tempElement.innerHTML = celsiusTemperature;
 }
 
-let followLink = document.querySelector("#fahr");
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
 followLink.addEventListener("click", toFahr);
 
-let followsLink = document.querySelector("#cels");
+let celsiusLink = document.querySelector("#celsius-link");
 followsLink.addEventListener("click", toCels);
