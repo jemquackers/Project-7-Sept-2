@@ -44,6 +44,7 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
+navigator.geolocation.getCurrentPosition(showPosition);
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
 
@@ -71,7 +72,7 @@ function showTemp(response) {
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${response.data.name}`;
   let tempElement = document.querySelector("h5");
-  tempElement.innerHTML = `${temperature}°C`;
+  tempElement.innerHTML = `${temperature}`;
   let iconElement = document.querySelector("#iconnow");
 
   celsiusTemperature = response.data.main.temp;
@@ -95,21 +96,22 @@ function toFahr(event) {
   let tempElement = document.querySelector("h5");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32);
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
   tempElement.innerHTML = fahrenheitTemperature;
 }
 
 function toCels(event) {
   event.preventDefault();
+  let tempElement = document.querySelector("h5");
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  tempElement.innerHTML = celsiusTemperature;
+  tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-followLink.addEventListener("click", toFahr);
+fahrenheitLink.addEventListener("click", toFahr);
 
 let celsiusLink = document.querySelector("#celsius-link");
-followsLink.addEventListener("click", toCels);
+celsiusLink.addEventListener("click", toCels);
