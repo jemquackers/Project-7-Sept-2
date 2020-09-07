@@ -1,6 +1,7 @@
 let now = new Date();
 
 let h4 = document.querySelector("h4");
+let h6 = document.querySelector("h6");
 
 let date = now.getDate();
 let hours = now.getHours();
@@ -26,8 +27,8 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-h4.innerHTML = `${day} ${month} ${date} ${year}   ${hours}:${minutes}`;
-
+h4.innerHTML = `${day} ${month} ${date} ${year}`;
+h6.innerHTML = `Last updated: ${hours}:${minutes}`;
 // button for location
 function showPosition(position) {
   let lat = position.coords.latitude;
