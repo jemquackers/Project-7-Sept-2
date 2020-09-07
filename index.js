@@ -99,8 +99,8 @@ function showTemp(response) {
   let description = response.data.weather["0"].description;
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
-  humidity.innerHTML = `Humidity ${currentHumidity}%`;
-  windspeed.innerHTML = `Wind ${wind}m/s`;
+  humidity.innerHTML = `Humidity:  ${currentHumidity}%`;
+  windspeed.innerHTML = `Windspeed:  ${wind}m/s`;
   weatherDescription.innerHTML = `${description}`;
   iconElement.setAttribute(
     "src",
