@@ -26,6 +26,10 @@ h2 {
   color: #19b5ff;
   padding: 20px 0px;
 }
+h4 {
+  color: #19b5ff;
+  padding: 0px 0px 10px 0px;
+}
 
 h5 {
   color: #19b5ff;
@@ -56,13 +60,6 @@ h5 {
   background: white;
   text-align: center;
   color: #19b5ff;
-  border-radius: 10px;
-  padding: 20px;
-  font-size: large;
-}
-small {
-  margin: 20px 0px;
-  text-align: center;
   border-radius: 10px;
   padding: 20px;
   font-size: large;
