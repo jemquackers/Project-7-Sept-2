@@ -31,15 +31,11 @@ h4 {
   padding: 0px 0px 10px 0px;
 }
 
-h5 {
+strong {
   color: #19b5ff;
-  padding: 0px 0px 10px 0px;
+  font-size: 30px;
 }
 
-.logo {
-  position: relative;
-  bottom: 60px;
-}
 .searchbar {
   padding-top: 20px;
   color: black;
@@ -56,11 +52,6 @@ h5 {
   border-radius: 10px;
 }
 
-.futurelooking {
-  background: white;
-  text-align: center;
-  color: #19b5ff;
-  border-radius: 10px;
-  padding: 20px;
-  font-size: large;
+.opensource {
+  padding: 20px 0px 0px 0px;
 }

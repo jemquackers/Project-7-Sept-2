@@ -71,7 +71,7 @@ function showTemp(response) {
   console.log(temperature);
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${response.data.name}`;
-  let tempElement = document.querySelector("h5");
+  let tempElement = document.querySelector("#tempnow");
   tempElement.innerHTML = `${temperature}`;
   let iconElement = document.querySelector("#iconnow");
 
@@ -93,7 +93,7 @@ function showTemp(response) {
 // function for Celsius and Fahrenheit
 function toFahr(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("h5");
+  let tempElement = document.querySelector("#tempnow");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
@@ -102,7 +102,7 @@ function toFahr(event) {
 
 function toCels(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("h5");
+  let tempElement = document.querySelector("#tempnow");
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   tempElement.innerHTML = Math.round(celsiusTemperature);
