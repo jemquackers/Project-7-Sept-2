@@ -1,5 +1,6 @@
-function formatDate(timestamp) {
-  let now = new Date(timestamp);
+let now = new Date();
+
+function formatDate() {
   let date = now.getDate();
   let year = now.getFullYear();
   let days = [
@@ -32,8 +33,8 @@ function formatDate(timestamp) {
   return `${day} ${date} ${month} ${year}`;
 }
 
-function formatHours(timestamp) {
-  let hours = now.getHours(timestamp);
+function formatHours() {
+  let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
@@ -41,7 +42,7 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${hours}: ${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 // button for location
