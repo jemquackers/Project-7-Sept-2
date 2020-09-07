@@ -7,7 +7,7 @@ header {
   background: white;
   border-radius: 10px;
   padding: 20px;
-  font-size: large;
+  font-size: 18px;
 }
 
 button {
@@ -15,8 +15,13 @@ button {
   text-align: center;
   padding: 5px 14px;
   display: block;
-  margin: 0 auto;
+  margin: 20px 0px 0px 0px;
   border-radius: 5px;
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 18px;
 }
 
 button:hover {
@@ -46,17 +51,8 @@ p {
   color: black;
 }
 
-.currentdetail {
-  background-color: white;
-  border: solid;
-  text-align: center;
-  color: #19b5ff;
-  padding: 20px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  border-radius: 10px;
-}
-
 .opensource {
   padding: 20px 0px 0px 0px;
+  font-size: 14px;
+  text-align: right;
 }
