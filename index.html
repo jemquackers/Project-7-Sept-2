@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>J Weather</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -20,67 +20,139 @@
 
   <body>
     <div class="container">
-      <div class="app-wrapper">
-        <div class="app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-9">
-                <in
-                  put
-                  type="search"
-                  placeholder="Type a city..."
-                  class="form-control"
-                  id="city-input"
-                  autocomplete="off"
-                />
-              </div>
-              <div class="col-3">
-                <input type="submit" value="Search" class="btn btn-primary" />
-              </div>
-            </div>
-          </form>
+      <header>
+        <button>Click for current location</button>
+        <form class="searchbar">
+          <label for="search"> Search </label>
+          <input type="text" id="search" placeholder="Location" />
+          <input type="submit" value="Go" />
+        </form>
 
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
+        <h2>Göteborg</h2>
+
+        <h4>Thursday 20 August 2020 18:09</h4>
+        <br />
+        <h5>15</h5>
+        <a href="#" id="fromc">°C </a>
+        <a href="#" id="toC">°F</a>
+        <div id="humidity">Humidity 0%</div>
+        <div id="windspeed">Windspeed 0 m/s</div>
+        <div id="weatherDescription">blank</div>
+
+        <div class="currentdetail">
+          <div class="row">
+            <div class="col">
+              <strong>03</strong>
+            </div>
+            <div class="col">
+              <strong>06</strong>
+            </div>
+            <div class="col">
+              <strong>09</strong>
+            </div>
+            <div class="col">
+              <strong>12</strong>
+            </div>
+            <div class="col">
+              <strong>15</strong>
+            </div>
+            <div class="col">
+              <strong>18</strong>
+            </div>
+            <div class="col">
+              <strong>21</strong>
+            </div>
+            <div class="col">
+              <strong>24</strong>
+            </div>
           </div>
           <div class="row">
-            <div class="col-6">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="sunny" id="icon" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperature">12</strong>
-                  <span class="units">
-                    <a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-                </div>
-              </div>
+            <div class="col">
+              <i class="fas fa-cloud-moon"></i>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: <span id="humidity">63</span>%</li>
-                <li>Wind: <span id="wind">2</span> km/hr</li>
-              </ul>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-sun"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-rain"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-rain"></i>
+            </div>
+            <div class="col">
+              <i class="fas fa-cloud-moon"></i>
             </div>
           </div>
-
-          <div class="row weather-forecast" id="forecast"></div>
+          <div class="row">
+            <div class="col">18 °C</div>
+            <div class="col">19 °C</div>
+            <div class="col">20 °C</div>
+            <div class="col">20 °C</div>
+            <div class="col">22 °C</div>
+            <div class="col">18 °C</div>
+            <div class="col">16 °C</div>
+            <div class="col">14 °C</div>
+          </div>
         </div>
-        <small>
-          <a
-            href="https://github.com/jemquackers/JW-Final-Vanilla"
-            target="_blank"
-            >Open-source code</a
-          >
-          by jemquackers
-        </small>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col futurelooking">
+            <div class="row">
+              <div class="col">
+                <strong> Fri </strong>
+              </div>
+              <div class="col">
+                <strong> Sat </strong>
+              </div>
+              <div class="col">
+                <strong>Sun</strong>
+              </div>
+              <div class="col">
+                <strong>Mon</strong>
+              </div>
+              <div class="col">
+                <strong>Tues</strong>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <i class="fas fa-cloud-moon"></i>
+              </div>
+              <div class="col">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+              <div class="col">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="col">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="col">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">1mm</div>
+              <div class="col">1mm</div>
+              <div class="col">1mm</div>
+              <div class="col">2mm</div>
+              <div class="col">5mm</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="src/index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
