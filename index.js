@@ -71,12 +71,19 @@ function showTemp(response) {
   h2.innerHTML = `${response.data.name}`;
   let tempElement = document.querySelector("h5");
   tempElement.innerHTML = `${temperature}°C`;
+  let iconElement = document.querySelector("#iconnow");
+
   let description = response.data.weather["0"].description;
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   humidity.innerHTML = `Humidity ${currentHumidity}%`;
   windspeed.innerHTML = `Wind ${wind}m/s`;
   weatherDescription.innerHTML = `${description}`;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 // function for Celsius and Fahrenheit
