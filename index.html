@@ -28,8 +28,8 @@
           <input type="submit" value="Go" />
         </form>
 
-        <h2>Göteborg</h2>
         <div class="container">
+          <div class="row"><h2>Göteborg</h2></div>
           <div class="row">
             <div class="col-6">
               <h4>Thursday 20 August 2020</h4>
@@ -40,19 +40,25 @@
                 src="http://openweathermap.org/img/wn/01d@2x.png"
                 alt="cloudy"
                 id="iconnow"
-                class="float-right"
+                class="float-left"
               />
-              <div class="float-right"></div>
+              <div class="float-left"></div>
             </div>
           </div>
         </div>
-        <br />
-        <h5>15</h5>
-        <a href="#" id="fromc">°C </a>
-        <a href="#" id="toC">°F</a>
-        <div id="humidity">Humidity 0%</div>
-        <div id="windspeed">Windspeed 0 m/s</div>
-        <div id="weatherDescription">blank</div>
+
+        <div class="row">
+          <div class="col-6">
+            <h5>15</h5>
+            <a href="#" id="cels">°C </a> |
+            <a href="#" id="fahr">°F</a>
+          </div>
+          <div class="col-6">
+            <div id="humidity">Humidity 0%</div>
+            <div id="windspeed">Windspeed 0 m/s</div>
+            <div id="weatherDescription">Description</div>
+          </div>
+        </div>
 
         <div class="currentdetail">
           <div class="row">
@@ -117,6 +123,14 @@
             <div class="col">16 °C</div>
             <div class="col">14 °C</div>
           </div>
+        </div>
+        <div class="opensource">
+          <a
+            href="https://github.com/jemquackers/Project-7-Sept-2"
+            target="blank"
+            >Open source code</a
+          >
+          by jemquackers
         </div>
       </header>
     </div>

@@ -73,6 +73,8 @@ function showTemp(response) {
   tempElement.innerHTML = `${temperature}°C`;
   let iconElement = document.querySelector("#iconnow");
 
+  celsiusTemperature = response.data.main.temp;
+
   let description = response.data.weather["0"].description;
   let wind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
@@ -87,20 +89,20 @@ function showTemp(response) {
 }
 
 // function for Celsius and Fahrenheit
-function follow(event) {
+function toFahr(event) {
   event.preventDefault();
   let h5 = document.querySelector("h5");
   h5.innerHTML = 9;
 }
 
-function follows(event) {
+function toCels(event) {
   event.preventDefault();
   let h5 = document.querySelector("h5");
   h5.innerHTML = 10;
 }
 
-let followLink = document.querySelector("#fromc");
-followLink.addEventListener("click", follow);
+let followLink = document.querySelector("#fahr");
+followLink.addEventListener("click", toFahr);
 
-let followsLink = document.querySelector("#toC");
-followsLink.addEventListener("click", follows);
+let followsLink = document.querySelector("#cels");
+followsLink.addEventListener("click", toCels);
