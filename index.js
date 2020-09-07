@@ -2,6 +2,9 @@ let now = new Date();
 
 function formatDate() {
   let date = now.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
   let year = now.getFullYear();
   let days = [
     "Sunday",
