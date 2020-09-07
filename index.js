@@ -1,34 +1,48 @@
-let now = new Date();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let date = now.getDate();
+  let year = now.getFullYear();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
 
-let h4 = document.querySelector("h4");
-let h6 = document.querySelector("h6");
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
 
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let year = now.getFullYear();
+  return `${day} ${date} ${month} ${year}`;
+}
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
-
-h4.innerHTML = `${day} ${month} ${date} ${year}`;
-h6.innerHTML = `Last updated: ${hours}:${minutes}`;
+function formatHours(timestamp) {
+  let hours = now.getHours(timestamp);
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}: ${minutes}`;
+}
 
 // button for location
 function showPosition(position) {
@@ -74,6 +88,11 @@ function showTemp(response) {
   let tempElement = document.querySelector("#tempnow");
   tempElement.innerHTML = `${temperature}`;
   let iconElement = document.querySelector("#iconnow");
+  let h6 = document.querySelector("h6");
+  h6.innerHTML = `Last updated: ${formatHours(response.data.dt * 1000)}`;
+
+  let h4 = document.querySelector("h4");
+  h4.innerHTML = `${formatDate(response.data.dt * 1000)}`;
 
   celsiusTemperature = response.data.main.temp;
 

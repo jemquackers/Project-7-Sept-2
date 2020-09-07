@@ -36,6 +36,10 @@ strong {
   font-size: 30px;
 }
 
+p {
+  text-transform: capitalize;
+}
+
 .searchbar {
   padding-top: 20px;
   color: black;
