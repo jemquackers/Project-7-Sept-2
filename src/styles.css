@@ -6,13 +6,15 @@ header {
   margin: 20px 0px;
   background: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   font-size: 18px;
 }
 
 button {
-  border: 0.5px solid black;
+  border: none;
   text-align: center;
+  background: #19b5ff;
+  color: white;
   padding: 5px 14px;
   display: block;
   margin: 20px 0px 0px 0px;
@@ -26,6 +28,9 @@ h6 {
 
 button:hover {
   cursor: pointer;
+  background: white;
+  color: #19b5ff;
+  border: 0.5px solid #19b5ff;
 }
 
 h2 {

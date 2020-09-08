@@ -138,3 +138,5 @@ fahrenheitLink.addEventListener("click", toFahr);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", toCels);
+
+
