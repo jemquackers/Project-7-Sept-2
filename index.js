@@ -82,9 +82,9 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
               <div class="col-2">
-              <h4>
+              <h5>
               ${formatHours(forecast.dt * 1000)}
-              </h4>
+              </h5>
               <img
                 src="http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -92,7 +92,7 @@ function displayForecast(response) {
                 alt=""
               />
               <div class="weather-forecast-temperature">
-                <h4>${Math.round(forecast.main.temp_max)}°</h4>
+                <h6>${Math.round(forecast.main.temp_max)}°</h6>
               </div>
             </div>
             `;

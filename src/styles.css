@@ -2,21 +2,14 @@ body {
 }
 
 header {
-  margin: 20px 0px;
+  margin: 20px 10px;
   background: #f7e3de;
   border-radius: 10px;
   padding: 30px;
   font-size: 18px;
   border: 5px solid #ec6e4c;
 }
-footer {
-  margin: 20px 0px;
-  background: #f7e3de;
-  border-radius: 10px;
-  padding: 30px;
-  font-size: 18px;
-  border: 5px solid #ec6e4c;
-}
+
 button {
   border: none;
   text-align: center;
@@ -64,7 +57,7 @@ p {
 }
 
 .opensource {
-  padding: 20px 0px 0px 0px;
+  padding: 20px 15px 0px 0px;
   font-size: 14px;
   text-align: right;
 }
@@ -72,10 +65,19 @@ p {
 .weather-forecast {
   font-weight: 100;
   font-size: 10px;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0px;
   text-align: center;
+  border: 3px solid #ec6e4c;
+  border-radius: 10px;
+  margin: 10px 3px;
 }
 
-.weather-forecast h3 {
-  font-size: 16px;
+.weather-forecast h5 {
+  font-size: 19px;
+  color: #ec6e4c;
+}
+
+.weather-forecast h6 {
+  font-size: 18px;
+  color: black;
 }
