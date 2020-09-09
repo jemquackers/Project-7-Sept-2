@@ -1,19 +1,26 @@
 body {
-  background-color: #19b5ff;
 }
 
 header {
   margin: 20px 0px;
-  background: white;
+  background: #f7e3de;
   border-radius: 10px;
   padding: 30px;
   font-size: 18px;
+  border: 5px solid #ec6e4c;
 }
-
+footer {
+  margin: 20px 0px;
+  background: #f7e3de;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 18px;
+  border: 5px solid #ec6e4c;
+}
 button {
   border: none;
   text-align: center;
-  background: #19b5ff;
+  background: #ec6e4c;
   color: white;
   padding: 5px 14px;
   display: block;
@@ -29,21 +36,21 @@ h6 {
 button:hover {
   cursor: pointer;
   background: white;
-  color: #19b5ff;
-  border: 0.5px solid #19b5ff;
+  color: #ec6e4c;
+  border: 0.5px solid #ec6e4c;
 }
 
 h2 {
-  color: #19b5ff;
+  color: #ec6e4c;
   padding: 20px 0px;
 }
 h4 {
-  color: #19b5ff;
+  color: #ec6e4c;
   padding: 0px 0px 10px 0px;
 }
 
 strong {
-  color: #19b5ff;
+  color: #ec6e4c;
   font-size: 30px;
 }
 

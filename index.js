@@ -60,6 +60,12 @@ function showPosition(position) {
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
+
+  let input = showPosition(response);
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = `${input.value}`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${input.value}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
@@ -76,9 +82,9 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
               <div class="col-2">
-              <h3>
+              <h4>
               ${formatHours(forecast.dt * 1000)}
-              </h3>
+              </h4>
               <img
                 src="http://openweathermap.org/img/wn/${
                   forecast.weather[0].icon
@@ -86,9 +92,7 @@ function displayForecast(response) {
                 alt=""
               />
               <div class="weather-forecast-temperature">
-                <strong>${Math.round(
-                  forecast.main.temp_max
-                )}°</strong>${Math.round(forecast.main.temp_min)}°
+                <h4>${Math.round(forecast.main.temp_max)}°</h4>
               </div>
             </div>
             `;
