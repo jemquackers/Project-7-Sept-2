@@ -56,16 +56,12 @@ function showPosition(position) {
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
-
-  let input = showPosition(response);
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${input.value}`;
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${input.value}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
